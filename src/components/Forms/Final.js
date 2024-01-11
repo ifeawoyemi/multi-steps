@@ -1,7 +1,8 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+// import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
-const Final = ({ values }) => {
+const Final = ({ values, prevStep }) => {
 
     //destructuring the object from values
   const { firstName, lastName, age, email } = values;
@@ -9,6 +10,11 @@ const Final = ({ values }) => {
     <>
       <Card style={{ marginTop: 100, textAlign: "left" }}>
         <Card.Body>
+          <p>
+          <Button variant="primary" onClick={prevStep}>
+                Previous
+              </Button>    
+            </p>
           <p>
             <strong>First Name :</strong> {firstName}{" "}
           </p>
